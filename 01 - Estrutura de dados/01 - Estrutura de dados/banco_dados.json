@@ -1,0 +1,60 @@
+{
+  "usuarios": [
+    {
+      "nome": "Daniel",
+      "data_nascimento": "24-03-1975",
+      "cpf": "1",
+      "endereco": "Bairro"
+    },
+    {
+      "nome": "Maria",
+      "data_nascimento": "22-02-2000",
+      "cpf": "2",
+      "endereco": "Bairro"
+    }
+  ],
+  "contas": [
+    {
+      "agencia": "0001",
+      "numero_conta": 1,
+      "usuario": {
+        "nome": "Daniel",
+        "data_nascimento": "24-03-1975",
+        "cpf": "1",
+        "endereco": "Bairro"
+      },
+      "saldo": 1100.0,
+      "extrato": "Depósito:\tR$ 1000.00\nSaque:\t\tR$ 100.00\nSaque:\t\tR$ 200.00\nSaque:\t\tR$ 100.00\n",
+      "numero_saques": 3,
+      "senha": "1111"
+    },
+    {
+      "agencia": "0001",
+      "numero_conta": 2,
+      "usuario": {
+        "nome": "Maria",
+        "data_nascimento": "22-02-2000",
+        "cpf": "2",
+        "endereco": "Bairro"
+      },
+      "saldo": 1000.0,
+      "extrato": "Depósito:\tR$ 600.00\nSaque:\t\tR$ 100.00\n",
+      "numero_saques": 1,
+      "senha": "1111"
+    },
+    {
+      "agencia": "0001",
+      "numero_conta": 3,
+      "usuario": {
+        "nome": "Daniel",
+        "data_nascimento": "24-03-1975",
+        "cpf": "1",
+        "endereco": "Bairro"
+      },
+      "saldo": 1490.45,
+      "extrato": "Depósito:\tR$ 1000.45\nSaque:\t\tR$ 10,00\n",
+      "numero_saques": 1,
+      "senha": "1111"
+    }
+  ]
+}
