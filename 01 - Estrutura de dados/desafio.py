@@ -1,15 +1,35 @@
 """
 Sistema Bancário - Gestão de Usuários e Contas
 
+FUNCIONALIDADES E IMPLEMENTAÇÕES:
+
 - Novo Usuário: Cadastro de uma pessoa física no sistema, informando nome, CPF, data de nascimento e endereço.
   Cada usuário pode ter uma ou mais contas bancárias associadas ao seu CPF.
-- Nova Conta: Abertura de uma conta bancária para um usuário já cadastrado. Cada conta tem número único, senha,
-  saldo, extrato e está vinculada a um usuário existente.
+
+- Nova Conta: Abertura de uma conta bancária para um usuário já cadastrado. Cada conta tem número único sequencial,
+  senha de 4 dígitos aleatórios, saldo inicial de R$ 500,00, extrato e contador de saques, e está vinculada a um usuário existente.
+
+- Login: O usuário acessa o sistema informando número da conta e senha. Apenas a conta autenticada pode realizar operações.
+
+- Depósito: Permite depósitos apenas de valores positivos, atualizando saldo e extrato da conta autenticada.
+
+- Saque: Permite até 3 saques diários de até R$ 500,00 cada, respeitando o saldo disponível e atualizando extrato e contador.
+
+- Extrato: Exibe todas as movimentações da conta autenticada e o saldo, com formatação brasileira (ex: R$ 1.000,00).
+
+- Redefinir Senha: Permite ao usuário redefinir a senha da conta autenticada, exigindo 4 dígitos numéricos.
+
+- Listar Contas: Exibe todas as contas cadastradas, mostrando agência, número, titular e saldo de cada uma, com valores formatados.
+
+- Persistência: Todos os dados de usuários e contas são salvos e carregados automaticamente em arquivo JSON.
+
+- Formatação Brasileira: Todos os valores monetários são exibidos no padrão brasileiro, com separador de milhar e duas casas decimais (ex: R$ 1.000,00, R$ 100,45, R$ 1.000.200,01).
 
 Fluxo recomendado:
 1. Criar novo usuário (caso ainda não exista).
 2. Criar nova conta para o usuário já cadastrado.
 3. Realizar login com número da conta e senha para acessar operações bancárias.
+4. Realizar depósitos, saques, consultar extrato, redefinir senha ou sair.
 
 """
 
