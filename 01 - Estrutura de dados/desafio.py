@@ -34,6 +34,22 @@ def depositar(saldo, valor, extrato, /):
 
 
 def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
+    """
+    Realiza um saque na conta, respeitando limites diários e por valor.
+
+    Regras:
+    - Até 3 saques por dia.
+    - Limite de R$500,00 por saque.
+    - Não permite saque maior que o saldo.
+    - Apenas valores positivos.
+
+    Exemplos:
+    - Saque de R$ 200,00 com saldo suficiente: saldo reduzido, extrato atualizado, contador incrementado.
+    - Saque de R$ 600,00: operação rejeitada por exceder o limite.
+    - Quarto saque no mesmo dia: operação rejeitada por exceder o número de saques.
+    - Saque de valor negativo: operação rejeitada.
+
+    """
     excedeu_saldo = valor > saldo
     excedeu_limite = valor > limite
     excedeu_saques = numero_saques >= limite_saques
@@ -164,4 +180,5 @@ def main():
             print("Operação inválida, por favor selecione novamente a operação desejada.")
 
 
-main()
+if __name__ == "__main__":
+    main()
