@@ -16,6 +16,13 @@ def menu():
 
 
 def depositar(saldo, valor, extrato, /):
+    """
+    Realiza um depósito na conta, aceitando apenas valores positivos.
+
+    Exemplos:
+    - Depósito de R$ 100,00: saldo passa de R$ 0,00 para R$ 100,00 e extrato registra "Depósito: R$ 100.00".
+    - Depósito de R$ -50,00: operação rejeitada, saldo e extrato permanecem inalterados.
+    """
     if valor > 0:
         saldo += valor
         extrato += f"Depósito:\tR$ {valor:.2f}\n"
